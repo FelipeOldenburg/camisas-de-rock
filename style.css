@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.nav {
+    background-color: hsla(0, 1%, 6%, 1);
+    color: #fff;
+    padding: 10px 20px;
+    width: auto;
+    height: 7vmax;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    padding: 2vmax 0;
+}
+
+.search-container {
+    margin-left: 10%;
+    padding: 2vmax 0;
+}
