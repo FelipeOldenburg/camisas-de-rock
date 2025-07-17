@@ -19,13 +19,28 @@ body {
 }
 
 .nav ul {
-    list-style: none;
     display: flex;
     float: right;
-    padding: 2vmax 0;
+    padding: 0 7vmax;
+    list-style: none;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li {
+    padding: 7%;
+    list-style: none;
 }
 
 .search-container {
     margin-left: 10%;
     padding: 2vmax 0;
+}
+
+.logo-aside {
+    position: absolute;
+    top: 18px;
+    left: 25px;
 }
