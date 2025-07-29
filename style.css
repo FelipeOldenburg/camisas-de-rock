@@ -14,7 +14,6 @@ body {
     background-color: hsla(0, 1%, 6%, 1);
     color: #fff;
     padding: 10px 20px;
-    width: auto;
     height: 7vmax;
 }
 
@@ -23,6 +22,10 @@ body {
     float: right;
     padding: 0 7vmax;
     list-style: none;
+    width: auto;
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-right: 80px;
 }
 .nav ul li a {
     color: #fff;
@@ -35,12 +38,24 @@ body {
 }
 
 .search-container {
-    margin-left: 10%;
+    margin-left: 7%;
     padding: 2vmax 0;
+}
+
+.search-container input[type="text"] {
+    padding-left: 15px;
 }
 
 .logo-aside {
     position: absolute;
-    top: 18px;
+    top: 25px;
     left: 25px;
+}
+
+.baner {
+    background-image: url('img/banner.jpg');
+    background-color: #171717;
+    color: #ffffff;
+    padding: 40px;
+    height: 200px;
 }
