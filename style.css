@@ -53,9 +53,27 @@ body {
 }
 
 .baner {
-    background-image: url('img/banner.jpg');
     background-color: #171717;
     color: #ffffff;
-    padding: 40px;
+    padding-top: 25px;
+    padding-left: 50px;
     height: 200px;
+}
+
+.title {
+    font-size: 55px;
+    font-family: 'Krona One', sans-serif;
+    line-height: 1.1;
+    color: #ffffff;
+    font-optical-sizing: auto;
+    transform: scaleX(1.2); 
+    transform-origin: left;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
