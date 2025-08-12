@@ -6,40 +6,54 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dedede;
     color: #333;
+}
+
+.header {
+    position: relative;
 }
 
 .nav {
     background-color: hsla(0, 1%, 6%, 1);
     color: #fff;
     padding: 10px 20px;
-    height: 7vmax;
+    min-height: 7vmax;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
 
 .nav ul {
     display: flex;
-    float: right;
-    padding: 0 7vmax;
+    flex-wrap: wrap; 
     list-style: none;
-    width: auto;
-    white-space: nowrap;
-    margin-top: 5px;
-    margin-right: 80px;
+    gap: 15px; 
+    margin: 0;
+    padding: 0;
+    order: 2;
 }
+
 .nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
 .nav ul li {
-    padding: 7%;
+    padding: 5px 10px;
     list-style: none;
 }
 
-.search-container {
-    margin-left: 7%;
-    padding: 2vmax 0;
+@media (max-width: 768px) {
+    .search-container {
+        margin-left: 0;
+        padding: 10px 0;
+        width: 100%;
+        order: 2;
+    }
 }
 
 .search-container input[type="text"] {
@@ -48,20 +62,67 @@ body {
 
 .logo-aside {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 15px;
+    left: 20px;
 }
 
 .baner {
-    background-color: #171717;
+    background-color: #171717; /* fundo escuro */
     color: #ffffff;
-    padding-top: 25px;
-    padding-left: 50px;
-    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px; /* espaçamento */
+    height: 200px; /* altura fixa, igual ao seu exemplo */
+    box-sizing: border-box;
+}
+
+.baner .title, .baner .subtitle {
+    font-family: 'Krona One', sans-serif;
+    max-width: 60%; /* texto ocupa 60% do banner */
+}
+
+.baner .title {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.baner .subtitle {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.baner .img-camisa {
+    max-height: 180px; /* altura da imagem para caber no banner */
+    object-fit: contain;
+    max-width: 35%;
+    flex-shrink: 0;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .baner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .baner .title, .baner .subtitle, .baner .img-camisa {
+        max-width: 100%;
+    }
+    .baner .img-camisa {
+        margin-top: 20px;
+        max-height: 150px;
+    }
 }
 
 .title {
-    font-size: 55px;
+    font-size: clamp(28px, 5vw, 55px);
     font-family: 'Krona One', sans-serif;
     line-height: 1.1;
     color: #ffffff;
@@ -72,7 +133,7 @@ body {
 }
 
 .subtitle {
-    font-size: 15px;
+    font-size: clamp(12px, 2vw, 15px);
     color: #ffffff;
     margin-top: 20px;
     font-family: 'Kumbh Sans', sans-serif;
