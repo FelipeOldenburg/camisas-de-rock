@@ -12,26 +12,25 @@ body {
 
 .header {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
 }
 
 .nav {
     background-color: hsla(0, 1%, 6%, 1);
-    color: #fff;
+    color: #ffffffff;
     padding: 10px 20px;
     min-height: 7vmax;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     gap: 20px;
 }
 
-
 .nav ul {
-    display: flex;
-    flex-wrap: wrap; 
     list-style: none;
-    gap: 15px; 
     margin: 0;
     padding: 0;
     order: 2;
@@ -47,6 +46,12 @@ body {
     list-style: none;
 }
 
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
     .search-container {
         margin-left: 0;
@@ -54,6 +59,24 @@ body {
         width: 100%;
         order: 2;
     }
+}
+
+.links-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* espaçamento entre blocos */
+    margin-left: 0
+}
+
+.minhas-compras {
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
 }
 
 .search-container input[type="text"] {
@@ -70,16 +93,25 @@ body {
     background-color: #171717; /* fundo escuro */
     color: #ffffff;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    padding: 30px 50px; /* espaçamento */
-    height: 200px; /* altura fixa, igual ao seu exemplo */
+    padding: 0px 50px; /* espaçamento */
+    height: auto; /* altura fixa, igual ao seu exemplo */
+    min-height: 200px;
     box-sizing: border-box;
+}
+
+.texto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 30px 0;
 }
 
 .baner .title, .baner .subtitle {
     font-family: 'Krona One', sans-serif;
-    max-width: 60%; /* texto ocupa 60% do banner */
+    max-width: none; 
 }
 
 .baner .title {
@@ -98,13 +130,16 @@ body {
 }
 
 .baner .img-camisa {
-    max-height: 180px; /* altura da imagem para caber no banner */
-    object-fit: contain;
-    max-width: 35%;
+    max-height: none;
+    height: 100%; 
     flex-shrink: 0;
+    width: auto;
+    object-fit: cover;
+    align-self: stretch;
+    display: block;
+    margin-right: 100px;
 }
 
-/* Ajustes para telas menores */
 @media (max-width: 768px) {
     .baner {
         flex-direction: column;
