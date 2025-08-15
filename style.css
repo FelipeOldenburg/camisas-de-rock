@@ -154,6 +154,10 @@ body {
   text-transform: uppercase;
 }
 
+.title:hover{
+    
+}
+
 .baner .subtitle {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 15px;
