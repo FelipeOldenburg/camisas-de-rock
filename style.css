@@ -48,8 +48,30 @@ body {
 
 .search-container{
     display: flex;
+    position: relative;
     align-items: center;
     gap: 10px;
+    margin-left: 100px;
+    background-color: white;          
+    border: none;                     
+    border-radius: 50px;                                
+    font-size: 14px;                  
+    width: 250px;                     
+    height: 20px;                                      
+}
+
+.search-container input[type="text"] {
+    padding-left: 30px;
+    border: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -79,14 +101,10 @@ body {
     gap: 20px;
 }
 
-.search-container input[type="text"] {
-    padding-left: 15px;
-}
-
 .logo-aside {
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: 22px;
+    left: 25px;
 }
 
 .baner {
@@ -99,6 +117,7 @@ body {
     height: auto; /* altura fixa, igual ao seu exemplo */
     min-height: 200px;
     box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .texto-container {
@@ -173,3 +192,47 @@ body {
     margin-top: 20px;
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+.band-logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+ .band-logos img {
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+            grid-template-rows: repeat(2, 1fr);    /* 2 linhas */
+            gap: 70px;
+            padding: 70px;
+        }
+
+        .item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            height: auto;
+            width: 205px;
+        }
+
+        .item img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            font-size: 14px;
+            margin: 0;
+        }       
