@@ -239,3 +239,21 @@ body {
   font-size: 14px;
   margin: 0;
 }
+
+footer {
+    background-color: #111; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container a {
+    color: #ff4444;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
