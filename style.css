@@ -220,32 +220,63 @@ body {
 
 .band-logos {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: center;
+  gap: 100px;
   margin-bottom: 30px;
   padding-top: 20px;
 }
 
 .band-logos img {
-  width: 200px;
+  width: 150px;
   height: 150px;
+  object-fit: contain;
   background-color: #fff;
 }
 
 .bandas {
-  width: 150px;
-  height: 150px;
+  width: 250px;   
+  height: 150px;  
+  background-color: #ffffff; 
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
 }
 
 .bandas img {
   object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.bandas-guns {
+  width: 250px;   
+  height: 150px;  
+  background-color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bandas-guns img {
+  object-fit: cover;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: rgb(255, 255, 255);
 }
 
 .bandas:hover {
   transform: scale(1.1);
-  transition: ease (0.3);
+  transition: ease (2.0);
+}
+
+.bandas-guns:hover {
+  transform: scale(1.1);
+  transition: ease (2.0);
 }
 
 .items {
@@ -255,17 +286,16 @@ body {
   gap: 70px;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0;
+  padding-bottom: 40px;
 }
 
 .item {
   background-color: #fff;
   border-radius: 8px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  height: auto;
-  width: 205px;
+  height: 300px;
 }
 
 .item:hover {
@@ -274,10 +304,11 @@ body {
 }
 
 .item img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 .item p {
