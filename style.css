@@ -143,11 +143,43 @@ body {
   margin: 0;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.title:hover {
-  transform: scale(1.1);
-  transition: ease (0.3);
+.title span {
+  position: relative;
+  display: inline-block;
+}
+
+.title span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 3px;
+  background: #ff4444;
+  transition: width 0.5s ease;
+}
+
+.title span::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  background: #ff4444;
+  transition: width 0.5s ease 0.2s; 
+}
+
+.title:hover span::before {
+  width: 100%;
+}
+
+.title:hover span::after{
+  width: 46%;
 }
 
 .baner .subtitle {
@@ -221,7 +253,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 70px;
-  padding: 70px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
 }
 
 .item {
@@ -269,3 +303,73 @@ footer {
   text-decoration: underline;
 }
 
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.social-media li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.social-media li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.social-media li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social-media li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.social-media li a:hover:before {
+  top: 0;
+}
+
+.social-media li:nth-child(1) a:before{
+  background: #3b5999;
+}
+
+.social-media li:nth-child(2) a:before{
+  background: #55acee;
+}
+
+.social-media li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+.social-media li:nth-child(4) a:before {
+  background: #dd4b39;
+}
