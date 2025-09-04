@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 20px;
+  position: relative;
 }
 
 .nav ul {
@@ -60,6 +61,14 @@ body {
   height: 20px;
 }
 
+.search-container input {
+  width: 100%;
+  height: 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
 .search-container input[type="text"] {
   padding-left: 30px;
   border: none;
@@ -80,16 +89,40 @@ body {
   gap: 30px;
   margin-left: 0;
   margin-right: 90px;
+  justify-content: space-between;
 }
 
-.minhas-compras {
+.links-bar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links-bar a:hover {
+  color: #ff4444;
+}
+
+.compras {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
-  margin-left: 40px;
+  order: 3;
 }
 
-.minhas-compras:hover {
-  transform: scale(1.1);
-  transition: ease (0.3);
+.compras i {
+  font-size: 22px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.compras i:hover {
+  color: #ff4444;
+}
+
+.compras a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .cadastro {
@@ -99,15 +132,24 @@ body {
   padding-right: 70px;
 }
 
+.login {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-right: 70px;
+}
+
 .logo-aside {
-  position: absolute;
+  position: fixed;
   top: 22px;
   left: 25px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .logo-aside:hover {
   transform: scale(1.1);
-  transition: ease (0.3);
 }
 
 .baner {
@@ -171,14 +213,14 @@ body {
   width: 0px;
   height: 3px;
   background: #ff4444;
-  transition: width 0.5s ease 0.2s; 
+  transition: width 0.5s ease 0.2s;
 }
 
 .title:hover span::before {
   width: 100%;
 }
 
-.title:hover span::after{
+.title:hover span::after {
   width: 46%;
 }
 
@@ -230,53 +272,51 @@ body {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  background-color: #fff;
 }
 
 .bandas {
-  width: 250px;   
-  height: 150px;  
-  background-color: #ffffff; 
+  width: 250px;
+  height: 150px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .bandas img {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  background-color: rgb(255, 255, 255);
 }
 
 .bandas-guns {
-  width: 250px;   
-  height: 150px;  
-  background-color: #ffffff; 
+  width: 250px;
+  height: 150px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .bandas-guns img {
   object-fit: cover;
   max-width: 90%;
   max-height: 90%;
-  background-color: rgb(255, 255, 255);
 }
 
 .bandas:hover {
   transform: scale(1.1);
-  transition: ease (2.0);
 }
 
 .bandas-guns:hover {
   transform: scale(1.1);
-  transition: ease (2.0);
+  transition: ease (2);
 }
 
 .items {
@@ -287,26 +327,28 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   padding-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .item {
   background-color: #fff;
   border-radius: 8px;
   padding: 15px;
+  padding-top: 20px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   height: 300px;
+  transition: transform 0.3s ease;
 }
 
 .item:hover {
   transform: scale(1.1);
-  transition: ease (0.3);
 }
 
 .item img {
   width: 150px;
-  height: 150px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: cover;
   display: block;
   margin: 0 auto 10px;
 }
@@ -364,7 +406,7 @@ footer {
 .social-media li a .icon {
   position: relative;
   color: #262626;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 3;
 }
 
@@ -381,7 +423,7 @@ footer {
   width: 100%;
   height: 100%;
   background: #f00;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 2;
 }
 
@@ -389,11 +431,11 @@ footer {
   top: 0;
 }
 
-.social-media li:nth-child(1) a:before{
+.social-media li:nth-child(1) a:before {
   background: #3b5999;
 }
 
-.social-media li:nth-child(2) a:before{
+.social-media li:nth-child(2) a:before {
   background: #55acee;
 }
 
@@ -404,3 +446,100 @@ footer {
 .social-media li:nth-child(4) a:before {
   background: #dd4b39;
 }
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* escondido */
+  width: 250px;
+  height: 100%;
+  background: url(img/backgroud-sidebar.png) no-repeat center;
+  background-size: inherit;
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+/* Sidebar aberta */
+#sidebar.active {
+  left: 0;
+}
+
+ #sidebar.active {
+      left: 0;
+    }
+
+    h3 {
+      color: yellow;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .filter-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .filter-list li {
+      margin: 10px 0;
+    }
+
+    .filter-list input {
+      margin-right: 8px;
+    }
+
+    .btn {
+      background: yellow;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .products {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .product {
+      background: #222;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      flex: 1 1 120px;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .price {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .table {
+      margin-top: 15px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table th, .table td {
+      border: 1px solid #333;
+      padding: 6px;
+      text-align: center;
+      color: white;
+    }
+
+    .table th {
+      background: #222;
+    }
+

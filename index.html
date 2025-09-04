@@ -22,39 +22,44 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="logo-aside">
-        <img src="img/guitar-header.png" width="48" height="48" />
-      </div>
+  <label for="toggleAside" class="logo-aside">
+    <img src="img/guitar-header.png" width="48" height="48" />
+  </label>
 
+    <header>
       <nav class="nav">
         <div class="search-container">
           <input
             type="text"
             placeholder="Buscar"
-            style="border-radius: 20px; border: none"
           />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
         <div class="links-bar">
+          
           <ul class="cadastro">
             <li><a href="#CADASTRE-SE">CADASTRE-SE</a></li>
+          </ul>
+          <ul class="login">
             <li><a href="#LOGIN">LOGIN</a></li>
           </ul>
-
-          <ul class="minhas-compras">
-            <li><a href="#MINHAS COMPRAS">MINHAS COMPRAS</a></li>
-          </ul>
+          <div class="compras">
+            <i class="fas fa-bag-shopping"></i>
+            <a href="#MINHAS COMPRAS">MINHAS COMPRAS</a>
+          </div>
         </div>
       </nav>
       <div class="baner">
         <div class="texto-container">
-         <h1 class="title" href="index.html"><span>CAMISAS DE <br />ROCK</span></h1>
+          <h1 class="title" href="index.html">
+            <span>CAMISAS DE <br />ROCK</span>
+          </h1>
           <p class="subtitle">STYLED CHILD O’ MINE</p>
         </div>
         <img
@@ -65,19 +70,72 @@
       </div>
     </header>
 
+     <div id="sidebar">
+ <h3>FILTRAR POR BANDA</h3>
+    <ul class="filter-list">
+      <li><input type="checkbox"> GUNS N ROSES</li>
+      <li><input type="checkbox"> METALLICA</li>
+      <li><input type="checkbox"> AC/DC</li>
+    </ul>
+
+    <!-- Playlist -->
+    <h3>🎵 PLAYLIST DE ROCK</h3>
+    <button class="btn">OUVIR AGORA</button>
+
+    <!-- Mais vendidas -->
+    <h3>MAIS VENDIDAS</h3>
+    <div class="products">
+      <div class="product">
+        <img src="camiseta1.jpg" alt="Produto 1">
+        <p>Camiseta Premium Metallica</p>
+        <p class="price">R$99,99</p>
+        <button class="btn">VER</button>
+      </div>
+      <div class="product">
+        <img src="camiseta2.jpg" alt="Produto 2">
+        <p>Camiseta Premium Guns N Roses</p>
+        <p class="price">R$99,99</p>
+        <button class="btn">VER</button>
+      </div>
+    </div>
+
+    <!-- Tabela de medidas -->
+    <h3>TABELA DE MEDIDAS</h3>
+    <table class="table">
+      <tr>
+        <th>Tamanhos</th>
+        <th>Frente</th>
+        <th>Costas</th>
+        <th>Compr.</th>
+      </tr>
+      <tr><td>PP</td><td>48</td><td>48</td><td>66</td></tr>
+      <tr><td>P</td><td>50</td><td>50</td><td>68</td></tr>
+      <tr><td>M</td><td>52</td><td>52</td><td>70</td></tr>
+      <tr><td>G</td><td>55</td><td>55</td><td>72</td></tr>
+      <tr><td>GG</td><td>59</td><td>59</td><td>73</td></tr>
+    </table>
+  </div>
+
+
     <main>
       <div class="band-logos">
         <div class="bandas-guns">
-          <img src="img/logoTipo/logotipo guns.png" alt="Guns N' Roses" />
+          <a href="indexGuns.html"></a>
+            <img src="img/logoTipo/logotipo guns.png" alt="Guns N' Roses" />
+          </a>
         </div>
         <div class="bandas">
-          <img
-            src="img/logoTipo/logotipo-do-metallica-segundo-dave-mustaine-trata-se-de-uma-mera-copia-1483383494770_v2_4x3-removebg-preview.png"
-            alt="Metallica"
-          />
+          <a href="indexMetallica.html">
+            <img
+              src="img/logoTipo/logotipo-do-metallica-segundo-dave-mustaine-trata-se-de-uma-mera-copia-1483383494770_v2_4x3-removebg-preview.png"
+              alt="Metallica"
+            />
+          </a>
         </div>
         <div class="bandas">
-          <img src="img/logoTipo/acdc-logo.png" alt="AC/DC" />
+          <a href="indexAcDc.html">
+            <img src="img/logoTipo/acdc-logo.png" alt="AC/DC" />
+          </a>
         </div>
       </div>
 
@@ -143,21 +201,22 @@
           <a href="#">Contato</a> | <a href="#">Sobre Nós</a> |
           <a href="#">Política de Privacidade</a>
         </p>
-              <ul class="social-media">
-        <li>
-          <a href="#"> <i class="fab fa-facebook-f icon"></i> </a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter icon"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
-        </li>
-      </ul>
+        <ul class="social-media">
+          <li>
+            <a href="#"> <i class="fab fa-facebook-f icon"></i> </a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter icon"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
+          </li>
+        </ul>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
