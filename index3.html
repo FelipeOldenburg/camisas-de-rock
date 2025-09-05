@@ -24,7 +24,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
     <title>Document</title>
   </head>
   <body>
@@ -54,28 +54,47 @@
       </nav>
     </header>
 
-    <div class="product-card">
-      <div class="product-image">
-        <img
-          src="img/camisas-img/guns-camisaCaveira.png"
-          alt="Camiseta Guns N' Roses"
-        />
+    <div class="carrinho-container">
+      <!-- Lista de produtos -->
+      <div class="carrinho-produtos">
+        <h2>MEU CARRINHO</h2>
+        <div class="produto">
+          <img
+            src="img/camisas-img/guns-camisaPreta.png"
+            alt="Camiseta Guns N' Roses"
+          />
+          <div class="produto-info">
+            <h3>Camiseta Especial Guns N’ Roses</h3>
+            <p>Masculina</p>
+            <p>Ref: #2024-617c-662-05</p>
+            <p>Vendido por Camisas De Rock</p>
+            <p>Entregue por sedex</p>
+            <p>Tamanho: GG</p>
+            <p>Cor: Preto</p>
+            <div class="produto-footer">
+              <div class="quantidade">
+                <span>QUANTIDADE:</span>
+                <button>-</button>
+                <input type="text" value="1" />
+                <button>+</button>
+              </div>
+              <span class="preco">R$99,99 no Pix</span>
+            </div>
+            <a href="#" class="explorar">Explorar mais produtos da loja</a>
+          </div>
+        </div>
       </div>
-      <div class="product-info">
-        <h2>Camiseta Especial<br />Guns N’ Roses</h2>
 
-        <select class="size-select">
-          <option>Selecionar Tamanho</option>
-          <option>PP</option>
-          <option>P</option>
-          <option>M</option>
-          <option>G</option>
-          <option>GG</option>
-        </select>
-
-        <p class="price">R$99,99</p>
-
-        <a href="index3.html"><button class="buy-btn">🛒 COMPRAR</button></a>
+      <!-- Resumo -->
+      <div class="carrinho-resumo">
+        <p><strong>SUBTOTAL (1 item)</strong> <span>R$99,99</span></p>
+        <hr />
+        <p>Cupon de desconto <a href="#">adicionar</a></p>
+        <hr />
+        <p><strong>TOTAL</strong> <span>R$99,99 no Pix</span></p>
+        <small>total ou até R$99,99 em até 6x de R$16,67 sem juros</small>
+        <a href="index4.html"><button class="btn-comprar">COMPRAR</button></a>
+        <button class="btn-outros">Escolher mais produtos</button>
       </div>
     </div>
 
@@ -106,15 +125,15 @@
               ><img src="img/camisas-img/guns-camisaPreta.png" alt="Produto 1"
             /></a>
             <p>Camiseta Premium Metallica</p>
-            <p class="price">R$99,99</p>
-            <a href="index2.html"><button class="btn">VER</button></a>
+            <a href="index2.html"><p class="price">R$99,99</p></a>
+            <button class="btn">VER</button>
           </div>
           <div class="product">
             <a href="index2.html"
               ><img src="img/camisas-img/metalica-camisa.png" alt="Produto 2"
             /></a>
             <p>Camiseta Premium Guns N Roses</p>
-            <p class="price">R$99,99</p>
+            <a href="index2.html"><p class="price">R$99,99</p></a>
             <a href="index2.html"><button class="btn">VER</button></a>
           </div>
         </div>

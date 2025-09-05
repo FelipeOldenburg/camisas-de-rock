@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -24,10 +24,10 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style5.css" />
     <title>Document</title>
   </head>
-  <body>
+<body>
     <label for="toggleAside" class="logo-aside">
       <img src="img/guitar-header.png" width="48" height="48" />
     </label>
@@ -53,33 +53,66 @@
         </div>
       </nav>
     </header>
-
-    <div class="product-card">
-      <div class="product-image">
-        <img
-          src="img/camisas-img/guns-camisaCaveira.png"
-          alt="Camiseta Guns N' Roses"
-        />
+    <main>
+     <div class="container">
+    <!-- Lado esquerdo -->
+    <div class="form-left">
+      <h3>*Campos obrigatórios.</h3>
+      <div class="form-group">
+        <input type="text" placeholder="*Nome">
+        <input type="text" placeholder="*Sobrenome">
       </div>
-      <div class="product-info">
-        <h2>Camiseta Especial<br />Guns N’ Roses</h2>
 
-        <select class="size-select">
-          <option>Selecionar Tamanho</option>
-          <option>PP</option>
-          <option>P</option>
-          <option>M</option>
-          <option>G</option>
-          <option>GG</option>
-        </select>
+      <div class="sexo">
+        <span>*Sexo</span>
+        <label><input type="radio" name="sexo"> Masculino</label>
+        <label><input type="radio" name="sexo"> Feminino</label>
+      </div>
 
-        <p class="price">R$99,99</p>
+      <h3>*Data de nascimento</h3>
+      <div class="form-group">
+        <input type="text" placeholder="*Dia">
+        <input type="text" placeholder="*Mês">
+        <input type="text" placeholder="*Ano">
+        <input type="text" placeholder="*CPF">
+      </div>
 
-        <a href="index3.html"><button class="buy-btn">🛒 COMPRAR</button></a>
+      <div class="form-group">
+        <input type="text" placeholder="*DDD e número de celular">
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="*CEP">
+        <input type="text" placeholder="*Tipos de Endereço">
+        <input type="text" placeholder="*Endereço">
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="*Número">
+        <input type="text" placeholder="Complemento (opcional)">
+        <input type="text" placeholder="*Bairro">
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="*Estado">
+        <input type="text" placeholder="*Cidade">
+        <input type="text" placeholder="Ponto de referência (opcional)">
       </div>
     </div>
 
-    <div id="sidebar">
+    <!-- Lado direito -->
+    <div class="form-right">
+      <div class="checkboxes">
+        <label><input type="checkbox"> Quero receber <b>ofertas e novidades</b> da loja Camisetas de Rock por e-mail</label>
+        <label><input type="checkbox"> Quero receber <b>ofertas e novidades</b> por WhatsApp</label>
+        <label><input type="checkbox"> Quero receber <b>notificações sobre os meus pedidos</b> por WhatsApp</label>
+        <label><input type="checkbox"> Concordo com o uso dos meus dados para compra e experiência no site conforme a <a href="#">Política de Privacidade</a></label>
+      </div>
+      <a href="index6.html"><button class="btn">CONTINUAR</button></a>
+    </div>
+  </div>
+</main>
+     <div id="sidebar">
       <div class="sidebar-content">
         <a href="index.html"><h3>HOME</h3></a>
         <h3 class="sidebar-title">FILTRAR POR BANDA</h3>
@@ -187,5 +220,5 @@
       </div>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

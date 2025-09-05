@@ -24,10 +24,10 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style4.css" />
     <title>Document</title>
   </head>
-  <body>
+<body>
     <label for="toggleAside" class="logo-aside">
       <img src="img/guitar-header.png" width="48" height="48" />
     </label>
@@ -53,31 +53,28 @@
         </div>
       </nav>
     </header>
-
-    <div class="product-card">
-      <div class="product-image">
-        <img
-          src="img/camisas-img/guns-camisaCaveira.png"
-          alt="Camiseta Guns N' Roses"
-        />
+    <main>
+      <div class="container">
+        <!-- Login -->
+        <div class="form-section">
+          <h2>Já sou cliente</h2>
+          <input type="text" placeholder="E-mail, CPF ou CNPJ">
+      <div class="password-container">
+        <input type="password" placeholder="Senha" id="password">
+        <i onclick="togglePassword()">👁️</i>
       </div>
-      <div class="product-info">
-        <h2>Camiseta Especial<br />Guns N’ Roses</h2>
-
-        <select class="size-select">
-          <option>Selecionar Tamanho</option>
-          <option>PP</option>
-          <option>P</option>
-          <option>M</option>
-          <option>G</option>
-          <option>GG</option>
-        </select>
-
-        <p class="price">R$99,99</p>
-
-        <a href="index3.html"><button class="buy-btn">🛒 COMPRAR</button></a>
-      </div>
+      <span class="forgot-password">Esqueci a senha</span>
+      <a href="index6.html"><button class="btn">ACESSAR CONTA</button></a>
     </div>
+
+    <!-- Cadastro -->
+    <div class="form-section">
+      <h2>Criar conta</h2>
+      <input type="email" placeholder="Informe seu e-mail">
+      <a href="index5.html"><button class="btn">PROSSEGUIR</button></a>
+    </div>
+  </div>
+</main>
 
     <div id="sidebar">
       <div class="sidebar-content">
@@ -187,5 +184,5 @@
       </div>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

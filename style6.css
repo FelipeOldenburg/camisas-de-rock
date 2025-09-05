@@ -1,0 +1,105 @@
+body {
+  background: url(img/Desktop\ -\ 10.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-title {
+    color: white;
+}
+
+h1 {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin: 70px auto;
+    }
+
+    .product {
+      text-align: center;
+      flex: 1;
+    }
+
+    .product img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .divider {
+      width: 1px;
+      background: #ccc;
+      height: 100%;
+    }
+
+    .timeline {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .step .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px auto;
+      font-size: 24px;
+      background: #fff;
+      color: #000;
+    }
+
+    .step.active .circle {
+      border-color: #0f0;
+      color: #0f0;
+    }
+
+    .step.active p {
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      z-index: -1;
+    }
+
+    .step:last-child::after {
+      display: none;
+    }
+
+    .date {
+      font-size: 12px;
+      margin-bottom: 5px;
+      color: #555;
+    }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -24,10 +24,10 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style6.css" />
     <title>Document</title>
   </head>
-  <body>
+<body>
     <label for="toggleAside" class="logo-aside">
       <img src="img/guitar-header.png" width="48" height="48" />
     </label>
@@ -54,30 +54,51 @@
       </nav>
     </header>
 
-    <div class="product-card">
-      <div class="product-image">
-        <img
-          src="img/camisas-img/guns-camisaCaveira.png"
-          alt="Camiseta Guns N' Roses"
-        />
+    <main>
+         <h1 class="main-title">Minhas Compras</h1>
+
+  <div class="container">
+    <!-- Produto -->
+    <div class="product">
+      <img src="img/camisas-img/guns-camisaPreta.png" alt="Produto">
+      <p><b>Camiseta Especial Guns N' Roses</b></p>
+      <p>Tamanho: GG</p>
+      <p>Cor: Preto</p>
+      <p>Quantidade: 1</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Linha do tempo -->
+    <div class="timeline">
+      <div class="step active">
+        <div class="date">04/07/2025<br>18:30</div>
+        <div class="circle">🛒</div>
+        <p>Pedido realizado</p>
       </div>
-      <div class="product-info">
-        <h2>Camiseta Especial<br />Guns N’ Roses</h2>
-
-        <select class="size-select">
-          <option>Selecionar Tamanho</option>
-          <option>PP</option>
-          <option>P</option>
-          <option>M</option>
-          <option>G</option>
-          <option>GG</option>
-        </select>
-
-        <p class="price">R$99,99</p>
-
-        <a href="index3.html"><button class="buy-btn">🛒 COMPRAR</button></a>
+      <div class="step active">
+        <div class="date">04/07/2025<br>19:10</div>
+        <div class="circle">💲</div>
+        <p>Pagamento realizado</p>
+      </div>
+      <div class="step">
+        <div class="date">...</div>
+        <div class="circle">📦</div>
+        <p>Em separação</p>
+      </div>
+      <div class="step">
+        <div class="date">...</div>
+        <div class="circle">🚚</div>
+        <p>Em entrega</p>
+      </div>
+      <div class="step">
+        <div class="date">...</div>
+        <div class="circle">🏠</div>
+        <p>Pedido entregue</p>
       </div>
     </div>
+  </div>
+    </main>
 
     <div id="sidebar">
       <div class="sidebar-content">
@@ -187,5 +208,5 @@
       </div>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
