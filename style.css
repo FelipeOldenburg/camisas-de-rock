@@ -667,48 +667,38 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     margin-right: 0;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: flex-start;
-  }
-  .cadastro,
-  .login {
-    padding-right: 0;
-    gap: 10px;
+    justify-content: flex-end;
   }
 }
 
-/* Celulares grandes (até 767px) */
+/* Celulares grandes */
 @media (max-width: 767px) {
   .nav {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 10px;
     padding: 10px 2vw;
     min-height: unset;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
   }
   .search-container {
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 15px;
+    display: none;
   }
   .links-bar {
     flex-direction: row;
     gap: 10px;
     margin-right: 0;
-    width: 100%;
+    width: auto;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
   }
   .cadastro,
-  .login,
-  .compras {
-    padding-right: 0;
+  .login {
     gap: 10px;
-    width: auto;
-    justify-content: flex-start;
+    padding-right: 0;
   }
   .baner {
     flex-direction: column;
@@ -735,6 +725,14 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   .band-logos {
     gap: 20px;
   }
+  .items {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 10px;
+  }
+  .item img {
+    max-width: 160px;
+  }
   .carrinho-container {
     flex-direction: column;
     gap: 10px;
@@ -757,45 +755,62 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     margin-bottom: 30px;
     padding: 10px;
   }
+  /* Minhas Compras - index6.html */
+  .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+  .product {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .timeline {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
 }
 
-/* Celulares pequenos (até 425px) */
+/* Celulares pequenos */
 @media (max-width: 425px) {
   body {
     font-size: 14px;
     padding: 0 5px;
   }
   .nav {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 8px;
     padding: 8px 2vw;
     min-height: unset;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
   }
   .search-container {
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 8px;
-    font-size: 13px;
+    display: none;
   }
   .links-bar {
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
     margin-right: 0;
-    width: 100%;
+    width: auto;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: flex-end;
   }
   .cadastro,
-  .login,
-  .compras {
-    padding-right: 0;
+  .login {
     gap: 8px;
-    width: 100%;
-    justify-content: flex-start;
+    padding-right: 0;
   }
   .baner {
     flex-direction: column;
@@ -822,6 +837,14 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   .band-logos img {
     width: 80px;
     height: auto;
+  }
+  .items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 5px;
+  }
+  .item img {
+    max-width: 120px;
   }
   .carrinho-container {
     flex-direction: column;
@@ -851,17 +874,77 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
     padding: 8px;
     font-size: 13px;
   }
+  /* Minhas Compras - index6.html */
+  .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 5px !important;
+    box-sizing: border-box;
+  }
+  .product {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .timeline {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
 }
 
-/* Carrinho fixo para mobile */
+/* Cadastro - index4.html */
 @media (max-width: 767px) {
-  .cart {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  .container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+  .form-section {
     width: 100%;
-    max-width: 100%;
-    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+  }
+  .form-section.ja-cliente {
+    order: 1;
+    margin-bottom: 10px;
+  }
+  .form-section.criar-conta {
+    order: 2;
+    margin-top: 10px;
+  }
+}
+
+/* Cadastro - index4.html para celulares */
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding: 5px !important;
+    box-sizing: border-box;
+  }
+  .form-section {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .form-section.ja-cliente {
+    order: 1;
+    margin-bottom: 8px;
+  }
+  .form-section.criar-conta {
+    order: 2;
+    margin-top: 8px;
   }
 }
