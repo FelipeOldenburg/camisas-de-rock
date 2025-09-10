@@ -12,6 +12,7 @@ body {
   margin: 20px;
   color: #fff;
   font-family: Arial, sans-serif;
+  flex-wrap: wrap;
 }
 
 /* Produtos */
