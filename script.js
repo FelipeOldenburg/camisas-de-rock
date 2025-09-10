@@ -38,3 +38,51 @@ function togglePassword() {
     passwordInput.type = "password";
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".btn-filter");
+  const items = document.querySelectorAll(".item");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      items.forEach(item => {
+        const banda = item.getAttribute("data-banda");
+
+        if (filter === "all" || banda === filter) {
+          item.style.display = "block"; // mostra
+        } else {
+          item.style.display = "none"; // esconde
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".btn-filter");
+  const items = document.querySelectorAll(".item");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault(); // evita subir a página
+
+      const filter = button.getAttribute("data-filter");
+
+      items.forEach(item => {
+        const banda = item.getAttribute("data-banda");
+
+        if (filter === "all" || banda === filter) {
+          // mostra com animação
+          item.style.display = "block";
+          setTimeout(() => item.classList.add("show"), 10);
+        } else {
+          // esconde com animação
+          item.classList.remove("show");
+          setTimeout(() => item.style.display = "none", 400);
+        }
+      });
+    });
+  });
+});
