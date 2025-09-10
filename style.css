@@ -642,74 +642,226 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
   background: #222;
 }
 
-/* Telas grandes (desktop) - acima de 1024px */
-@media (min-width: 1025px) {
-  /* ajustes de layout se precisar */
-}
-
-/* Tablets (entre 768px e 1024px) */
 @media (max-width: 1024px) {
-  /* Ex: reduzir grid de 4 colunas pra 2 */
   .items {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-/* Celulares grandes (entre 426px e 767px) */
-@media (max-width: 767px) {
-  header nav ul {
-    flex-direction: column;
+  .band-logos {
+    gap: 40px;
+  }
+  .baner {
+    padding: 0 10vw;
+  }
+  .baner .img-camisa {
+    margin-right: 0;
+    max-width: 350px;
+    width: 60vw;
+    height: auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .links-bar {
+    gap: 18px;
+    margin-right: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .cadastro,
+  .login {
+    padding-right: 0;
     gap: 10px;
   }
+}
 
-  .items {
-    grid-template-columns: repeat(2, 1fr);
+/* Celulares grandes (até 767px) */
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 2vw;
+    min-height: unset;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .search-container {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .links-bar {
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .cadastro,
+  .login,
+  .compras {
+    padding-right: 0;
+    gap: 10px;
+    width: auto;
+    justify-content: flex-start;
+  }
+  .baner {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 2vw;
+    min-height: 150px;
+    width: 100%;
+  }
+  .baner .img-camisa {
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 80vw;
+    max-width: 250px;
+    height: auto;
+    align-self: center;
+  }
+  .texto-container {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .baner .title {
+    font-size: 32px;
+  }
+  .band-logos {
+    gap: 20px;
+  }
+  .carrinho-container {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+  }
+  .produto {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  .produto img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .carrinho-resumo {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
   }
 }
 
-/* Celulares pequenos (até 425px, iPhone 12 Mini incluso) */
+/* Celulares pequenos (até 425px) */
 @media (max-width: 425px) {
   body {
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
-
-  header nav ul {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px 2vw;
+    min-height: unset;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .search-container {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .links-bar {
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .cadastro,
+  .login,
+  .compras {
+    padding-right: 0;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .baner {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    padding: 10px 0;
+    min-height: 100px;
+    width: 100%;
   }
-
-  .items {
-    grid-template-columns: 1fr; /* 1 camiseta por linha */
-    gap: 15px;
-  }
-
-  .item img {
-    max-width: 100%;
+  .baner .img-camisa {
+    margin: 10px auto 0 auto;
+    display: block;
+    width: 90vw;
+    max-width: 160px;
     height: auto;
+    align-self: center;
   }
-
-  footer {
-    font-size: 12px;
+  .texto-container {
+    padding: 5px 0;
     text-align: center;
   }
+  .baner .title {
+    font-size: 20px;
+  }
+  .band-logos img {
+    width: 80px;
+    height: auto;
+  }
+  .carrinho-container {
+    flex-direction: column;
+    gap: 8px;
+    margin: 5px;
+  }
+  .produto {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 6px;
+  }
+  .produto img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  .carrinho-resumo {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    padding: 6px;
+    font-size: 13px;
+  }
+  .btn-comprar,
+  .btn-outros {
+    padding: 8px;
+    font-size: 13px;
+  }
 }
+
+/* Carrinho fixo para mobile */
 @media (max-width: 767px) {
-  .cart { /* ajusta o seletor conforme o teu CSS */
+  .cart {
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
-    width: 100%;       /* ocupa toda a largura */
+    width: 100%;
     max-width: 100%;
-    border-radius: 10px 10px 0 0; /* fica tipo "gaveta" */
-  }
-}
-
-@media (max-width: 425px) {
-  .band-logos img {
-    width: 100px;   /* tamanho fixo bom pro iPhone 12 mini */
-    height: auto;
+    border-radius: 10px 10px 0 0;
   }
 }
